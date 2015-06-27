@@ -77,6 +77,8 @@ note this uses [virtualenvwrapper](http://virtualenvwrapper.readthedocs.org/en/l
 4. [Erlis Vidal](http://github.com/erlis) for creating a tutorial of how to install lettuce on windows.
 
 # Known issues
+Lettuce has problems with Django 1.8.  These fixes will help alleviate such problems, hopefully they will be rolled into the master build
+
 
 ## windows support
 

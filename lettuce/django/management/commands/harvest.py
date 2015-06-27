@@ -37,7 +37,7 @@ class Command(BaseCommand):
     requires_model_validation = False
 
     option_list = BaseCommand.option_list[1:] + (
-        make_option('-v', '--verbosity', action='store', dest='verbosity', default='4',
+        make_option('-l', '--lverbosity', action='store', dest='lverbosity', default='4',
             type='choice', choices=map(str, range(5)),
             help='Verbosity level; 0=no output, 1=only dots, 2=only scenario names, 3=colorless output, 4=normal output (colorful)'),
 
@@ -124,7 +124,7 @@ class Command(BaseCommand):
     def handle(self, *args, **options):
         setup_test_environment()
 
-        verbosity = int(options.get('verbosity', 4))
+        verbosity = int(options.get('lverbosity', 4))
         apps_to_run = tuple(options.get('apps', '').split(","))
         apps_to_avoid = tuple(options.get('avoid_apps', '').split(","))
         run_server = not options.get('no_server', False)
